@@ -9,12 +9,12 @@ def maya_main_window():
     main_window = omui.MQtUtil.mainWindow()
     return wrapInstance(long(main_window), QtWidgets.QWidget)
 
-class SmartSaveUI(QtWidgets.QDialog):
+class smartsaveui(QtWidgets.QDialog):
 
     def __init__(self):
         '''Constructor'''
         #Allows constructor to work with python 2 and 3
-        super(SmartSaveUI, self).__init__(parent=maya_main_window())
+        super(smartsaveui, self).__init__(parent=maya_main_window())
         self.scene = mayautils.SceneFile()
 
         self.setWindowTitle("Maya Smart Save")
